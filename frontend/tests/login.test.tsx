@@ -1,5 +1,14 @@
-import React from 'react';
-import Login from '../src/login';
+import React from "react";
+import { render} from "@testing-library/react";
 
-test('renders learn react link', () => {
+import Login from "../src/login";
+
+function renderLoginForm() {
+     render(<Login />);
+  }
+
+describe("<Login />", () => {
+  test("should display a blank login form", () => {
+    renderLoginForm();
+  });
 });
